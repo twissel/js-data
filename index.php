@@ -3,7 +3,7 @@
 
 require_once 'classes/Geo.php';
 require_once 'classes/TranzitNumber.php';
-
+require_once 'classes/Db.php';
 
 $c = isset($_GET['c']) ? $_GET['c'] : 'jsonp';
 
@@ -13,7 +13,7 @@ $info = [];
 $mode = $_GET['mode'];
 switch ($mode) {
 	case 'postcode':
-		switch ($country) {
+		switch ($country) {	
 			case 'uk':
 				$fields = ["town" => "town", "county" => "county"];
 				break;
