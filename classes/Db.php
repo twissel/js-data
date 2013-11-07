@@ -24,7 +24,6 @@ class Db{
 		self::$host = $data['host'];
 		self::$password = $data['password'];
 		self::$db = $data['db'];	
-		var_dump(self::$user);
 	}
 
 	public static function get(){
