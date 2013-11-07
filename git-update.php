@@ -45,7 +45,7 @@ $cmd = array (
     //'submodules' => 'git submodule foreach git pull origin master',
 );
 
-$dir = realpath(dirname(__FILE__) . "/../");
+$dir = realpath(dirname(__FILE__));
 
 chdir( $dir );
 
