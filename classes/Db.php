@@ -10,9 +10,7 @@ class Db{
 	protected static function init(){
 		if(!self::$mysql){
 			self::readConfig();
-			echo '1';
 			self::$mysql = new mysqli(self::$host, self::$user, self::$password, self::$db);
-			echo '2';
 			if(!self::$mysql){
 				die('Failed to connect');
 			} 

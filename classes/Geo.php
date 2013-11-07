@@ -1,9 +1,9 @@
 <?php
 
 
-echo '4';
+
 require_once 'Db.php';
-echo '5';
+
 
 class PostCode{
 
@@ -15,6 +15,7 @@ class PostCode{
 		$query = self::makeQuery($country, $fields);
 		var_dump($query);
 		$stmt = $mysql->stmt_init();
+		var_dump($stmt);
 		$stmt->prepare($query);
 		$stmt->bind_param('s', $postCode);
 		$stmt->execute();
