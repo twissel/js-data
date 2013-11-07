@@ -15,10 +15,9 @@ class PostCode{
 		$query = self::makeQuery($country, $fields);
 		$stmt = $mysql->stmt_init();
 		$stmt->prepare($query);
-		var_dump($stmt->bind_param('s', $postCode));
-		var_dump($stmt->execute());
+		$stmt->bind_param('s', $postCode);
+		$stmt->execute();
 		$result = $stmt->get_result();
-		var_dump($result);
 		$stmt->close();
 		$row = $result->fetch_row();
 		return Db::makeResult($fields, $row);
