@@ -13,12 +13,14 @@ class PostCode{
 		$mysql = Db::get();
 
 		$query = self::makeQuery($country, $fields);
+		var_dump($query);
 		$stmt = $mysql->stmt_init();
 		$stmt->prepare($query);
 		$stmt->bind_param('s', $postCode);
 		$stmt->execute();
 		var_dump($stmt);
 		$result = $stmt->get_result();
+		var_dump($result);
 		$stmt->close();
 		$row = $result->fetch_row();
 		return Db::makeResult($fields, $row);
