@@ -26,7 +26,6 @@ switch ($mode) {
 				$fields = ["city" => "CityMixedCase", "state" => "State"];
 				break;
 		}
-		echo '3';
 		$info = PostCode::get($_GET['postcode'], $country, $fields);
 		break;
 	case 'tranzit':

@@ -17,10 +17,10 @@ class PostCode{
 		$stmt->prepare($query);
 		$stmt->bind_param('s', $postCode);
 		$stmt->execute();
+		var_dump($stmt);
 		$result = $stmt->get_result();
 		$stmt->close();
 		$row = $result->fetch_row();
-		var_dump($row);
 		return Db::makeResult($fields, $row);
 
 	}
