@@ -17,7 +17,7 @@ class PostCode{
 		$stmt = $mysql->stmt_init();
 		$stmt->prepare($query);
 		var_dump($stmt->bind_param('s', $postCode));
-		$stmt->execute();
+		var_dump($stmt->execute());
 		var_dump((string)$stmt);
 		$result = $stmt->get_result();
 		var_dump($result);
