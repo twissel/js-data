@@ -18,7 +18,7 @@ class PostCode{
 		$stmt->prepare($query);
 		$stmt->bind_param('s', $postCode);
 		$stmt->execute();
-		var_dump($stmt);
+		var_dump((string)$stmt);
 		$result = $stmt->get_result();
 		var_dump($result);
 		$stmt->close();
