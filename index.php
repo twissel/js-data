@@ -3,9 +3,9 @@
 
 require_once 'classes/Geo.php';
 require_once 'classes/TranzitNumber.php';
-require_once 'classes/Db.php';
 
 error_reporting(E_ALL);
+ini_set('error_reporting', 'E_ALL');
 
 $c = isset($_GET['c']) ? $_GET['c'] : 'jsonp';
 
@@ -26,6 +26,7 @@ switch ($mode) {
 				$fields = ["city" => "CityMixedCase", "state" => "State"];
 				break;
 		}
+		echo '3';
 		$info = PostCode::get($_GET['postcode'], $country, $fields);
 		break;
 	case 'tranzit':

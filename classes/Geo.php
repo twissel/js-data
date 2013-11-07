@@ -1,5 +1,9 @@
 <?php
+
+
+echo '4';
 require_once 'Db.php';
+echo '5';
 
 class PostCode{
 
