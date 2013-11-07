@@ -4,7 +4,7 @@
 require_once 'classes/Geo.php';
 require_once 'classes/TranzitNumber.php';
 require_once 'classes/Db.php';
-
+die('blea');
 $c = isset($_GET['c']) ? $_GET['c'] : 'jsonp';
 
 $country = $_SERVER['HTTP_HOST'];
