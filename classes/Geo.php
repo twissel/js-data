@@ -9,7 +9,7 @@ class PostCode{
 		$mysql = Db::get();
 
 		$query = self::makeQuery($country, $fields);
-		var_sump($query);
+		var_dump($query);
 		$stmt = $mysql->stmt_init();
 		$stmt->prepare($query);
 		$stmt->bind_param('s', $postCode);
