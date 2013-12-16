@@ -6,8 +6,8 @@ require_once 'classes/TranzitNumber.php';
 
 $c = isset($_GET['c']) ? $_GET['c'] : 'jsonp';
 
-$country = $_SERVER['HTTP_HOST'];
-$country = substr($country, 0, 2);
+//$country = $_SERVER['HTTP_HOST'];
+$country = $_GET['country'];
 $info = [];
 $mode = $_GET['mode'];
 switch ($mode) {
