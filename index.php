@@ -21,7 +21,6 @@ switch ($mode) {
 		switch ($country) {	
 			case 'ru':
 				$info = PostCode::getRu($_GET['postcode']);
-				die();
 				break;
 			case 'uk':
 				$fields = ["town" => "town", "county" => "county"];
