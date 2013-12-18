@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<META http-equiv="content-type" content="text/html; charset=utf-8">
-</head>
-<body>
+
 <?php
 
 
@@ -49,8 +44,6 @@ switch ($mode) {
 
 echo $c.'('.json_encode($info).');';
 ?>
-</body>
-</html>
 
 
 
