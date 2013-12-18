@@ -51,7 +51,7 @@ class PostCode{
 		$return = [];
 		foreach ($streets as $street) {
 			$t = [0 => $street] + $res[$street['PARENTGUID']];
-			$one = ["region" => $t[1]["REGIONCODE"] , "street" => $t[0]["FORMALNAME"]];
+			$one = ["region" => $t[0]["REGIONCODE"] , "street" => $t[0]["FORMALNAME"]];
 			if(isset($t[4])){
 				$one['city'] = $t[4]["FORMALNAME"];
 			}else if(isset($t[5])){
